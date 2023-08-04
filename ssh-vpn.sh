@@ -20,7 +20,7 @@ commonname=none
 email=agunxz@themoon.my,id
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/andristji/Xray-SSH/main/password.txt"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/myvpn1/Xray-SSH/main/password.txt"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -129,20 +129,20 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/andristji/Xray-SSH/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/myvpn1/Xray-SSH/main/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
 cd
-wget -O /usr/bin/badvpn-udpgw https://github.com/andristji/Xray-SSH/main/badvpn/badvpn-udpgw && chmod +x  /usr/bin/badvpn-udpgw
+wget -O /usr/bin/badvpn-udpgw https://github.com/myvpn1/Xray-SSH/main/badvpn/badvpn-udpgw && chmod +x  /usr/bin/badvpn-udpgw
 #system badvpn 7300
-wget -O /etc/systemd/system/svr-7300.service https://github.com/andristji/Xray-SSH/main/badvpn/svr-7300.service && chmod +x  /etc/systemd/system/svr-7300.service
+wget -O /etc/systemd/system/svr-7300.service https://github.com/myvpn1/Xray-SSH/main/badvpn/svr-7300.service && chmod +x  /etc/systemd/system/svr-7300.service
 #system badvpn 7200
-wget -O /etc/systemd/system/svr-7200.service https://github.com/andristji/Xray-SSH/main/badvpn/svr-7200.service && chmod +x  /etc/systemd/system/svr-7200.service
+wget -O /etc/systemd/system/svr-7200.service https://github.com/myvpn1/Xray-SSH/main/badvpn/svr-7200.service && chmod +x  /etc/systemd/system/svr-7200.service
 #system badvpn 7100
-wget -O /etc/systemd/system/svr-7100.service https://github.com/andristji/Xray-SSH/main/badvpn/svr-7100.service && chmod +x  /etc/systemd/system/svr-7100.service
+wget -O /etc/systemd/system/svr-7100.service https://github.com/myvpn1/Xray-SSH/main/badvpn/svr-7100.service && chmod +x  /etc/systemd/system/svr-7100.service
 
 #reboot system 7100
 systemctl daemon-reload
